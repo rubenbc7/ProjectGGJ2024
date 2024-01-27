@@ -1009,6 +1009,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1234322311}
   - component: {fileID: 1234322312}
+  - component: {fileID: 1234322313}
   m_Layer: 0
   m_Name: TristeMusic
   m_TagString: Untagged
@@ -1024,7 +1025,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1234322310}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 123.3, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1043,18 +1044,18 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 4d344eb749d367d4e9c399f428b5addd, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.437
+  m_Volume: 0.2
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 118.4
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -1127,6 +1128,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1234322313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1234322310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cec965965734f2e4c9383e2cd6a19ffb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 4d344eb749d367d4e9c399f428b5addd, type: 3}
+  fadeInDuration: 15
+  fadeOutDuration: 3
+  startTime: 4
 --- !u!1 &1325605443
 GameObject:
   m_ObjectHideFlags: 0
@@ -1137,8 +1154,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1325605444}
   - component: {fileID: 1325605445}
+  - component: {fileID: 1325605446}
+  - component: {fileID: 1325605447}
+  - component: {fileID: 1325605448}
   m_Layer: 0
-  m_Name: Circle
+  m_Name: HEAD
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1154,7 +1174,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.009999752, y: 0.7209877, z: 0}
   m_LocalScale: {x: 1.6281347, y: 0.53601146, z: 1.6281347}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1437746998}
   m_RootOrder: 1
@@ -1211,6 +1231,54 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1325605446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1325605443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b93aedf2b109c724c9331ba1266b8793, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!111 &1325605447
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1325605443}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 2e01299fcfd4f4d4683ed7e12047db56, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 2e01299fcfd4f4d4683ed7e12047db56, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
+--- !u!95 &1325605448
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1325605443}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0bd0d6ea5a2296e4b9b951ea7bfce9f7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &1437746991
 GameObject:
   m_ObjectHideFlags: 0
@@ -2198,6 +2266,7 @@ GameObject:
   - component: {fileID: 1891449693}
   - component: {fileID: 1891449694}
   - component: {fileID: 1891449695}
+  - component: {fileID: 1891449696}
   m_Layer: 0
   m_Name: IROMO
   m_TagString: Player
@@ -2450,6 +2519,14 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0.44}
   m_Size: {x: 1, y: 1.87}
   m_Direction: 0
+--- !u!81 &1891449696
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1891449688}
+  m_Enabled: 1
 --- !u!1 &2118073732
 GameObject:
   m_ObjectHideFlags: 0
@@ -2479,7 +2556,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2118073732}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &2118073734
 Camera:
   m_ObjectHideFlags: 0

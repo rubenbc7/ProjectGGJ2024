@@ -11,4 +11,14 @@ public class Interactions : MonoBehaviour
         this.GetComponent<Dialogue>().enabled = true;
         _talkings.SetActive(true);
     }
+
+    public void Follow ()
+    {
+        this.GetComponent<Follow>().enabled = true;
+    }
+
+    public void Unfollow ()
+    {
+        this.GetComponent<Follow>().enabled = false;
+    }
 }

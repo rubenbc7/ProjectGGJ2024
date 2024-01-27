@@ -8,6 +8,7 @@ public class Interactions : MonoBehaviour
     public void Talk () 
     {
         this.GetComponent<Collider2D>().enabled = false;
+        this.GetComponent<Dialogue>().enabled = true;
         _talkings.SetActive(true);
     }
 }

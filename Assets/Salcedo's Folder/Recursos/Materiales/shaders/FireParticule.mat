@@ -42,7 +42,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _DetalleAnimFuego: 7.5
+    - _DetalleAnimFuego: 7
     - _VelFuegoAnim: -0.5
     m_Colors:
     - _ColoFlame: {r: 191.74902, g: 36.14118, b: 11.043138, a: 1}

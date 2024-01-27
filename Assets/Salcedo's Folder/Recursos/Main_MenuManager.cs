@@ -17,7 +17,7 @@ public class Main_MenuManager : MonoBehaviour
     private static Manager manager;
 
     [Header("Opciones")]
-    public float Volumen;
+    public float Volumen = 100;
     [SerializeField] AudioSource audioSource;
     [SerializeField] private Slider VolumenSlider;
     [SerializeField] TextMeshProUGUI VolumenTex;
@@ -50,7 +50,7 @@ public class Main_MenuManager : MonoBehaviour
         }
         else
         {
-            print("Its my first Day");
+            //print("Its my first Day");
             SetearResoluciones();                                     //Seteamos la resolucion maxima
             GestionVolumen();                                         //Actualizamos al vol max.
             manager.ItsMyFirstDay = false;
@@ -62,7 +62,7 @@ public class Main_MenuManager : MonoBehaviour
     public void CambiarEscena(string Escena)
     {
         PasoDeDatos();
-        manager.CambioDeEscena(Escena, manager.SpawnPoint, 0f);
+        manager.CambioDeEscena(Escena);
     }
 
 

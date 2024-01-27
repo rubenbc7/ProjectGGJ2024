@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Fuego
-  m_Shader: {fileID: -6465566751694194690, guid: 9c21c573a41b8bd408982381631451bc, type: 3}
+  m_Name: FireParticule
+  m_Shader: {fileID: -6465566751694194690, guid: ae294b407f7b06d41bb730f6681b47e5, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 4
@@ -20,8 +20,12 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 0}
+    - _SampleTexture2D_625452368a174295b48016ac9629c61c_Texture_1:
+        m_Texture: {fileID: 10300, guid: 0000000000000000f000000000000000, type: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture2DAsset_040530acc9fe47abbcb2b6bc0c6e50b1_Out_0:
+        m_Texture: {fileID: 2800000, guid: 90f1a8bc4b52dc1418cebc8ef374a244, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -39,15 +43,11 @@ Material:
     m_Ints: []
     m_Floats:
     - _DetalleAnimFuego: 7.5
-    - _DetalleParticulas: 2.74
-    - _Fuerzaviento: 0.1
-    - _VelFuegoAnim: -0.8
+    - _VelFuegoAnim: -0.5
     m_Colors:
-    - _ColoFlame: {r: 512, g: 56.032368, b: 0, a: 1}
-    - _Color2: {r: 0.7169812, g: 0.3715831, b: 0.02367392, a: 0}
-    - _Direccion: {r: 0, g: -0.2, b: 0, a: 0}
-    - _DireccionViento: {r: -0.5, g: -0.5, b: 0, a: 0}
+    - _ColoFlame: {r: 191.74902, g: 36.14118, b: 11.043138, a: 1}
+    - _Colorbola: {r: 253.99226, g: 50.532494, b: 2.659605, a: 0}
+    - _DireccionViento: {r: -0.1, g: -0.1, b: 0, a: 0}
     - _FuerzaDistorcion: {r: 0.2, g: 0.2, b: 0, a: 0}
-    - _Viento: {r: 0.21, g: 0, b: 0, a: 0}
     - _espefilizar: {r: 0, g: -0.5, b: 0, a: 0}
   m_BuildTextureStacks: []

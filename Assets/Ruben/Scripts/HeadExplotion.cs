@@ -5,6 +5,7 @@ using UnityEngine;
 public class HeadExplotion : MonoBehaviour
 {
     [SerializeField] private GameObject particleSystem;
+    [SerializeField] private GameObject HaHa;
     private Animator animator;
 
     public void StartAnim()
@@ -13,7 +14,8 @@ public class HeadExplotion : MonoBehaviour
         animator = GetComponent<Animator>();
 
         // Llamar a la función después de 4 segundos
-        Invoke("ActivateParticlesAndAnimator", 4.0f);
+        Invoke("ActivateParticlesAndAnimator", 1.0f);
+        HaHa.SetActive(true);
     }
 
     void ActivateParticlesAndAnimator()
@@ -34,6 +36,7 @@ public class HeadExplotion : MonoBehaviour
 
     void Boom()
     {
+        HaHa.SetActive(false);
         // Activar el objeto de partículas
         if (particleSystem != null)
         {

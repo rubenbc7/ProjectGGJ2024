@@ -36,7 +36,6 @@ public class Dialogue : MonoBehaviour
 
     public void Exit()
     {
-        currentIndex = 0;
         _destroy.Invoke();
         Destroy(_dialogues[0].transform.parent.gameObject);
         this.GetComponent<Dialogue>().enabled = false;

@@ -38,9 +38,9 @@ public class PlayerController : MonoBehaviour
         rb.velocity = new Vector2(currentSpeed, rb.velocity.y);
 
         if (horizontalInput > 0)
-            transform.localScale = new Vector3(1, 1, 1);
+            transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
         else if (horizontalInput < 0)
-            transform.localScale = new Vector3(-1, 1, 1);
+            transform.localScale = new Vector3(-0.5f, 0.5f, 0.5f);
     }
 
     private void PlayFootstepSounds()

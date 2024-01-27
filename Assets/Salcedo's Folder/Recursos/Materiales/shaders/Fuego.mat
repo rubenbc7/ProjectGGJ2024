@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: SAturationFilter
-  m_Shader: {fileID: -6465566751694194690, guid: 63f92024e514b6d4b944c1a884dba3bd, type: 3}
+  m_Name: Fuego
+  m_Shader: {fileID: -6465566751694194690, guid: 9c21c573a41b8bd408982381631451bc, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 4
@@ -20,10 +20,6 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -38,6 +34,9 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Saturacion: 1
-    m_Colors: []
+    - _DetalleParticulas: 2.74
+    m_Colors:
+    - _ColoFlame: {r: 0.8980392, g: 0.5341326, b: 0.0470588, a: 0}
+    - _Color2: {r: 0.7169812, g: 0.3715831, b: 0.02367392, a: 0}
+    - _Direccion: {r: 0, g: -0.2, b: 0, a: 0}
   m_BuildTextureStacks: []

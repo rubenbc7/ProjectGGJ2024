@@ -19,7 +19,11 @@ public class Pause : MonoBehaviour
 
     }
 
-
+    private void Awake()
+    {
+        Ispaused = false;
+        Time.timeScale = 1.0f;
+    }
     public void PauseManagement ()
     {
         if (Ispaused)

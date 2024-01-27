@@ -36,9 +36,12 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
+  - Saturacion
+  - Distorsion
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: EfectsLayerHigher
+    uniqueID: 966973939
     locked: 0

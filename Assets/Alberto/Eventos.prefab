@@ -5233,7 +5233,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 4
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: f9be886597b8187409c5ef6cbb4960f9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -6451,6 +6451,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8975061704168609003}
   - component: {fileID: 8975061704168609002}
+  - component: {fileID: 1659958578}
   m_Layer: 0
   m_Name: Circle
   m_TagString: Untagged
@@ -6466,7 +6467,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8975061704168609004}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.009999752, y: 0.7209877, z: 0}
+  m_LocalPosition: {x: 0.009999752, y: -0.962, z: 0}
   m_LocalScale: {x: 1.6281347, y: 0.53601146, z: 1.6281347}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6514,7 +6515,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1f6407f8e469b2549976043f702cd49a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -6525,6 +6526,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1659958578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8975061704168609004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecdf0d3d45086bb49b97c4c4fb58a9fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 8975061704507383854}
 --- !u!1 &8975061704198334628
 GameObject:
   m_ObjectHideFlags: 0
@@ -7406,7 +7420,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _talkings: {fileID: 8975061704498078895}
-  force: 70
+  force: 55
   angle: 60
   targetRb: {fileID: 8975061702687128601}
 --- !u!114 &8975061704370436770

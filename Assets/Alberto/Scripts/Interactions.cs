@@ -11,6 +11,9 @@ public class Interactions : MonoBehaviour
     [SerializeField] private float force = 10f;
     [SerializeField] private float angle = 45f;
     [SerializeField] private Rigidbody2D targetRb;
+
+    [SerializeField] private Animator characterAnimator;
+    [SerializeField] private string characterAnimationPush;
     public void Talk () 
     {
         this.GetComponent<Collider2D>().enabled = false;
@@ -34,6 +37,7 @@ public class Interactions : MonoBehaviour
         float fy = force * Mathf.Sin(angle * Mathf.Deg2Rad);
 
         targetRb.AddForce(new Vector3(fx, fy, 0f), ForceMode2D.Impulse);
+        characterAnimator.Play(characterAnimationPush);
     }
 
     public void ReactivateTrigger () 

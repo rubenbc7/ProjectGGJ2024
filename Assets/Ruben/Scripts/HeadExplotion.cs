@@ -30,8 +30,8 @@ public class HeadExplotion : MonoBehaviour
         
 
         // Llamar a la función para eliminar el objeto después de 4 segundos más
-        Invoke("Boom", 2.0f);
-        Invoke("DestroyGameObject", 6.0f);
+        Invoke("Boom", 1.8f);
+        Invoke("DestroyGameObject", 5.4f);
     }
 
     void Boom()

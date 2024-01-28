@@ -30,6 +30,7 @@ public class Pause : MonoBehaviour
         {
             Ispaused = false;
             MenuPausaObj.SetActive(false);
+            
             Time.timeScale = 1;
 
 
@@ -37,7 +38,8 @@ public class Pause : MonoBehaviour
         {
             Ispaused = true;
             MenuPausaObj.SetActive(true);
-            Time.timeScale = 0;
+            StartCoroutine(Wait());
+            
         }
     }
 
@@ -49,5 +51,11 @@ public class Pause : MonoBehaviour
     public void ApplicationExit ()
     {
         Application.Quit();                              
+    }
+    IEnumerator Wait()
+    {
+       
+        yield return new WaitForSeconds(0.35f);
+        Time.timeScale = 0;
     }
 }

@@ -1730,14 +1730,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.83281416, g: 0.8330033, b: 0.8962264, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 346c5dc4005465f4180bbc63da9b42ca, type: 3}
+  m_Texture: {fileID: 2800000, guid: 954ba0d3ec49a8c42aef6920e610346c, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -5320,7 +5320,7 @@ MonoBehaviour:
   audioClip: {fileID: 8300000, guid: 4d344eb749d367d4e9c399f428b5addd, type: 3}
   fadeInDuration: 30
   fadeOutDuration: 3
-  startTime: 30
+  startTime: 60
 --- !u!82 &2146603225
 AudioSource:
   m_ObjectHideFlags: 0

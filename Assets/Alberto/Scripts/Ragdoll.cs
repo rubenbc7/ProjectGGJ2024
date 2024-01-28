@@ -41,12 +41,15 @@ public class Ragdoll : MonoBehaviour
         this.GetComponent<Animator>().enabled = false;
         this.GetComponent<Collider2D>().enabled = false;
         this.GetComponent<Rigidbody2D>().gravityScale = 0;
+        this.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionX;
 
         foreach (Transform child in transform)
         {
             child.GetComponent<Collider2D>().enabled = true;
             child.GetComponent<Rigidbody2D>().simulated = true;
         }
+
+        this.GetComponent<PlayerController>().enabled = false;
     }
 
     public void isNotRagdoll()
@@ -55,6 +58,8 @@ public class Ragdoll : MonoBehaviour
         this.GetComponent<Animator>().enabled = true;
         this.GetComponent<Collider2D>().enabled = true;
         this.GetComponent<Rigidbody2D>().gravityScale = 1;
+        this.GetComponent<Rigidbody2D>().constraints &= ~RigidbodyConstraints2D.FreezePositionX;
+        this.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
 
         for (int i = 0; i < childTransforms.Count; i++)
         {
@@ -64,5 +69,7 @@ public class Ragdoll : MonoBehaviour
             child.localPosition = originalPositions[i];
             child.localRotation = originalRotations[i];
         }
+
+        this.GetComponent<PlayerController>().enabled = true;
     }
 }

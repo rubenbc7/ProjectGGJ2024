@@ -1761,6 +1761,7 @@ GameObject:
   - component: {fileID: 2083117235739828582}
   - component: {fileID: 73878268063908307}
   - component: {fileID: 8900091267388315891}
+  - component: {fileID: 1598392598396186462}
   m_Layer: 0
   m_Name: Sprites
   m_TagString: Untagged
@@ -1822,6 +1823,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
+--- !u!111 &1598392598396186462
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3196846794084910440}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: e1bd7823911259d43803caac514c3da0, type: 2}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &3932294184177185317
 GameObject:
   m_ObjectHideFlags: 0
@@ -7062,6 +7078,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4064944528752263713}
   - component: {fileID: 4064944528752263715}
+  - component: {fileID: 8170341707115196062}
   - component: {fileID: 4064944528752263717}
   - component: {fileID: 4064944528752263712}
   - component: {fileID: 4064944528752263718}
@@ -7119,6 +7136,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 16.95, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &8170341707115196062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4064944528752263736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 393d6c1f159010040b07e6c9bcba845a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterAnimator: {fileID: 2464808518717834304}
+  characterAnimationIdleName: idle_jirafa
+  characterAnimationWalkingName: walk_jirafa
+  characterAnimationPush: 
 --- !u!114 &4064944528752263717
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7135,6 +7168,8 @@ MonoBehaviour:
   force: 10
   angle: 45
   targetRb: {fileID: 0}
+  characterAnimator: {fileID: 0}
+  characterAnimationPush: 
 --- !u!114 &4064944528752263712
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7242,6 +7277,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4064944528775940357}
   - component: {fileID: 4064944528775940359}
+  - component: {fileID: 7445310389566115907}
   - component: {fileID: 4064944528775940356}
   - component: {fileID: 4064944528775940377}
   - component: {fileID: 4064944528775940378}
@@ -7298,6 +7334,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.68460464, y: 1.539394}
   m_EdgeRadius: 0
+--- !u!114 &7445310389566115907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4064944528775940380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 393d6c1f159010040b07e6c9bcba845a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterAnimator: {fileID: 5340097166489257216}
+  characterAnimationIdleName: idle_cocodrilo
+  characterAnimationWalkingName: walk_cocodrilo
+  characterAnimationPush: 
 --- !u!114 &4064944528775940356
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7329,6 +7381,8 @@ MonoBehaviour:
   force: 55
   angle: 60
   targetRb: {fileID: 0}
+  characterAnimator: {fileID: 0}
+  characterAnimationPush: 
 --- !u!114 &4064944528775940378
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8437,6 +8491,8 @@ MonoBehaviour:
   force: 35
   angle: 40
   targetRb: {fileID: 0}
+  characterAnimator: {fileID: 0}
+  characterAnimationPush: 
 --- !u!114 &4064944529752308944
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10637,6 +10693,8 @@ MonoBehaviour:
   force: 30
   angle: 135
   targetRb: {fileID: 0}
+  characterAnimator: {fileID: 2818509717881309512}
+  characterAnimationPush: push_caballo
 --- !u!114 &4064944530634245728
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10755,6 +10813,18 @@ MonoBehaviour:
       - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: HeadExplotion, Assembly-CSharp
         m_MethodName: StartAnim
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: ActivateAnimations, Assembly-CSharp
+        m_MethodName: Push
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -16523,6 +16593,8 @@ MonoBehaviour:
   force: 10
   angle: 45
   targetRb: {fileID: 0}
+  characterAnimator: {fileID: 0}
+  characterAnimationPush: 
 --- !u!114 &4964170282839945289
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27590,6 +27662,8 @@ MonoBehaviour:
   force: 10
   angle: 45
   targetRb: {fileID: 0}
+  characterAnimator: {fileID: 0}
+  characterAnimationPush: 
 --- !u!114 &4964170283477527310
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -4,7 +4,13 @@ using UnityEngine;
 
 public class Interactions : MonoBehaviour
 {
+    [Header("Objeto de dialogos")]
     [SerializeField] private GameObject _talkings;
+
+    [Header("Propiedades de empuje")]
+    [SerializeField] private float force = 10f;
+    [SerializeField] private float angle = 45f;
+    [SerializeField] private Rigidbody2D targetRb;
     public void Talk () 
     {
         this.GetComponent<Collider2D>().enabled = false;
@@ -20,5 +26,13 @@ public class Interactions : MonoBehaviour
     public void Unfollow ()
     {
         this.GetComponent<Follow>().enabled = false;
+    }
+
+    public void Push()
+    {
+        float fx = force * Mathf.Cos(angle * Mathf.Deg2Rad);
+        float fy = force * Mathf.Sin(angle * Mathf.Deg2Rad);
+
+        targetRb.AddForce(new Vector3(fx, fy, 0f), ForceMode2D.Impulse);
     }
 }

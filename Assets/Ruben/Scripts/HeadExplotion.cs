@@ -6,6 +6,7 @@ public class HeadExplotion : MonoBehaviour
 {
     [SerializeField] private GameObject particleSystem;
     [SerializeField] private GameObject HaHa;
+    [SerializeField] private float _timeToBoom = 1f;
     private Animator animator;
 
     public void StartAnim()
@@ -14,7 +15,7 @@ public class HeadExplotion : MonoBehaviour
         animator = GetComponent<Animator>();
 
         // Llamar a la función después de 4 segundos
-        Invoke("ActivateParticlesAndAnimator", 1.0f);
+        Invoke("ActivateParticlesAndAnimator", _timeToBoom);
         HaHa.SetActive(true);
     }
 

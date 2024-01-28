@@ -15,4 +15,9 @@ public class TriggerEnter : MonoBehaviour
             _triggerEnter.Invoke();
         }
     }
+
+    public void deactivateCollider2D()
+    {
+        this.GetComponent<Collider2D>().enabled = false;
+    }
 }

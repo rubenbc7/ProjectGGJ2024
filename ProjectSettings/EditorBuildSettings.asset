@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Ruben/MainCharacterGameplay.unity
     guid: 81f13166e06da744c979952a93202c46
+  - enabled: 1
+    path: Assets/Ruben/End.unity
+    guid: 87964555c565a8341ba891de29e93c90
   m_configObjects: {}

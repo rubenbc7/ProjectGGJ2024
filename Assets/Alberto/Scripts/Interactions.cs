@@ -35,4 +35,9 @@ public class Interactions : MonoBehaviour
 
         targetRb.AddForce(new Vector3(fx, fy, 0f), ForceMode2D.Impulse);
     }
+
+    public void ReactivateTrigger () 
+    {
+        this.GetComponent<Collider2D>().enabled = true;
+    }
 }

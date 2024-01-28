@@ -6,7 +6,7 @@ using UnityEngine.Events;
 
 public class Dialogue : MonoBehaviour
 {
-    [SerializeField] private UnityEvent _destroy;
+    [SerializeField] private UnityEvent _onEndDialogue;
     [SerializeField] private GameObject[] _dialogues;
     private int currentIndex = 0;
     void Update()
@@ -36,8 +36,8 @@ public class Dialogue : MonoBehaviour
 
     public void Exit()
     {
-        _destroy.Invoke();
-        Destroy(_dialogues[0].transform.parent.gameObject);
+        _onEndDialogue.Invoke();
+        _dialogues[0].transform.parent.gameObject.SetActive(false);
         this.GetComponent<Dialogue>().enabled = false;
     }
 

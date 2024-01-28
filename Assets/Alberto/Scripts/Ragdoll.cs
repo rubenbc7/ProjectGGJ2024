@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Ragdoll : MonoBehaviour
 {
+    [SerializeField] private UnityEvent _onRagdoll;
     private bool ragdollActive = false;
     private List<Transform> childTransforms = new List<Transform>();
     private List<Vector3> originalPositions = new List<Vector3>();
@@ -23,7 +25,7 @@ public class Ragdoll : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0) && ragdollActive)
         {
-            Invoke("DelayedRagdollDeactivation", 2f);
+            Invoke("DelayedRagdollDeactivation", 1f);
         }
     }
 
@@ -34,6 +36,7 @@ public class Ragdoll : MonoBehaviour
 
     public void isRagdoll()
     {
+        _onRagdoll.Invoke();
         ragdollActive = true;
         this.GetComponent<Animator>().enabled = false;
         this.GetComponent<Collider2D>().enabled = false;

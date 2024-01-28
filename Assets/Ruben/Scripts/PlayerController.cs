@@ -34,6 +34,7 @@ public class PlayerController : MonoBehaviour
         float targetSpeed = horizontalInput * moveSpeed;
 
         currentSpeed = Mathf.MoveTowards(currentSpeed, targetSpeed, Time.fixedDeltaTime * acceleration);
+        AnimState(currentSpeed);
 
         rb.velocity = new Vector2(currentSpeed, rb.velocity.y);
 
@@ -62,4 +63,18 @@ public class PlayerController : MonoBehaviour
 
         return hit.collider != null;
     }
+
+    void AnimState(float speed)
+    {
+        Animator animator = this.GetComponent<Animator>();
+        if(speed != 0)
+        {
+            animator.Play("walk_player");
+        }
+        else
+        {
+            animator.Play("idle_player");
+        }
+    }
+
 }
